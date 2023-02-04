@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import Home from './pages/Home';
@@ -9,11 +11,12 @@ import './styles/common/App.css';
 import Input from "./pages/Input";
 import Input2 from "./pages/Input2";
 import List from "./pages/List";
+import Logo from "./components/Logo";
 
 
 function App() {
   const [isOpen, setOpen] = useState("false");
-  
+
   const acitveToggle = () => {
     setOpen(!isOpen);
   }
@@ -21,12 +24,12 @@ function App() {
   return (
     <div className="App">
       <nav className={isOpen ? "active" : ""}>
-        <Link to="/home">Home</Link> 
-        <Link to="/about">About</Link>
-        <Link to="/counter">Counter</Link>
-        <Link to="/input">Input</Link>
-        <Link to="/input2">Input2</Link>
-        <Link to="/list">List</Link>
+        <Logo />
+        <div className="menu">
+          <Link to="/home">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/counter">Counter</Link>
+        </div>
         <div className="toggle" onClick={acitveToggle}></div>
       </nav>
       <Routes>
