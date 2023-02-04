@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+:root
+{
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-color);
+  padding: 8px 12px;
+}
+.navbar_logo
+{
+  font-size: 24px;
+  padding-left: 5px;
+}
+.navbar_logo .navbar_a
+{
+  text-transform: uppercase;
+}
+.navbar_logo .navbar_a:hover
+{
+  color: #fff;
+  opacity: 0.7;
+}
+.navbar_menu
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.navbar_menu li
+{
+  padding: 8px 12px;
+}
+.navbar_menu li:hover
+{
+  background: var(--accent-color);
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.navbar_a
+{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.navbar_menu li:hover .navbar_a
+{
+  color: #000;
+}
+.navbar_login
+{
+  display: flex;
+  justify-content: center;
+}
+.navbar_login button
+{
+  background: transparent;
+  color: var(--text-color);
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.toggle
+{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0;
+  /* background: #fff; */
+}
+.toggle::before
+{
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 2px;
+  background: var(--text-color);
+  transition: 0.5s;
+}
+.toggle::after
+{
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 15px;
+  height: 2px;
+  background: var(--text-color);
+  box-shadow: 0 10px 0 var(--text-color);
+  transition: 0.5s;
+}
+nav.open .toggle::before
+{
+  transform: rotate(45deg);
+}
+nav.open .toggle::after
+{
+  top: 20px;
+  transform: rotate(-45deg);
+  box-shadow: 0 0px 0 var(--text-color);
+}
+
+@media screen and (max-width: 768px) 
+{
+  .navbar
+  {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    transition: 0.5s;
+  }
+  .navbar_logo
+  {
+    width: 100%;
+    padding-left: 20px;
+  }
+  .navbar_menu
+  {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar.open .navbar_menu
+  {
+    display: flex;
+  }
+  .navbar_menu li
+  {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_login
+  {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar.open .navbar_login
+  {
+    display: flex;
+  }
+  .toggle
+  {
+    opacity: 1;
+  }
+}
