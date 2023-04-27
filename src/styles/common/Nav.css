@@ -147,6 +147,10 @@ nav.open .toggle::after
     width: 100%;
     text-align: center;
   }
+  .navbar_menu li a
+  {
+    letter-spacing: 0.2em;
+  }
   .navbar_login
   {
     display: none;
