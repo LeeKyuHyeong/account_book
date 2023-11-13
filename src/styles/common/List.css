@@ -1,0 +1,47 @@
+.userTbl
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table
+{
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  min-height: 40vh;
+}
+thead tr th,
+td
+{
+  min-width: 200px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+}
+.btn
+{
+  padding: 0;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover
+{
+  background: #d4d4d6;
+  color: #fff;
+  font-weight: 600;
+}

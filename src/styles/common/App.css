@@ -3,3 +3,15 @@
 {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.notice
+{
+  position: relative;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 30vh;
+  /* background: #f00; */
+}
